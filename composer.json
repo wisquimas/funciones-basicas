@@ -1,0 +1,11 @@
+{
+  "name": "gafa/funciones-basicas",
+  "type": "library",
+  "description": "Funciones para iniciar en gafa",
+  "authors": [
+    {
+      "name": "Mario Sanzol",
+      "email": "wisquimas@gmail.com"
+    }
+  ]
+}
