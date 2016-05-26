@@ -1,0 +1,69 @@
+/* The container of the options when the widget is not folded down */
+
+.dived-select-ctn:not(.folded-down)
+{
+    background-color: #808080;
+}
+
+/* The container of the options when the widget is folded down */
+
+.dived-select-ctn.folded-down
+{
+    background-color: #808080;
+}
+
+/* The element that when it's clicked, the dropdown list gets folded down. */
+
+.dived-select-folded
+{
+    border: groove cornflowerblue;
+}
+
+/* The folded (preview) element when the widget is folded down. */
+
+.dived-select-ctn.folded-down .dived-select-folded
+{
+    display: block;
+}
+
+/* The folded (preview) element when the widget is not folded down. */
+
+.dived-select-ctn:not(.folded-down) .dived-select-folded
+{
+    display: block;
+}
+
+/* The options container when folded down. */
+
+.dived-select-ctn.folded-down .dived-select
+{
+    display: block;
+}
+
+/* The options container when not folded down. */
+
+.dived-select-ctn:not(.folded-down) .dived-select
+{
+    display: none;
+}
+
+/* Every single option */
+
+.dived-option:hover
+{
+    border: dashed deepskyblue;
+}
+
+/* Disabled option elements */
+
+.dived-option[data-disabled]
+{
+    color: dimgray;
+}
+
+/* The currently selected option */
+
+.dived-option.dived-option-selected
+{
+    background-color: #f9ff83;
+}
