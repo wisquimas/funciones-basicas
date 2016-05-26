@@ -7,7 +7,7 @@ global $movil;
 */
 define('ROUT_GAFA',__DIR__);
 
-define('THEMES_GAFA',ROUT_GAFA.DIRECTORY_SEPARATOR.'themes');
+define('THEMES_GAFA',basename( dirname( ABSPATH ) ).DIRECTORY_SEPARATOR.'themes');
 define('PLUGINS_GAFA',ROUT_GAFA.DIRECTORY_SEPARATOR.'plugins');
 
 /*
