@@ -14,14 +14,6 @@ function gafa($var, $tags = null) {
 }
 
 
-if( !function_exists('traer_PHPMailer') ){
-	function traer_PHPMailer(){
-		if ( !class_exists('PHPMailer') ) {
-			require_once(dirname( __FILE__ ).'/PHPMailer/class.phpmailer.php');
-		}
-	};
-};
-
 if( is_admin() ){
 	
 	function custom_colors() {
@@ -29,5 +21,3 @@ if( is_admin() ){
 	}
 	add_action('admin_head', 'custom_colors');
 };
-
-?>

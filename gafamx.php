@@ -11,11 +11,6 @@ define('THEMES_GAFA',ROUT_GAFA.DIRECTORY_SEPARATOR.'themes');
 define('PLUGINS_GAFA',ROUT_GAFA.DIRECTORY_SEPARATOR.'plugins');
 
 /*
-**COMPOSER
-*/
-require_once(dirname( __FILE__ ) ."/core/vendor/autoload.php");
-
-/*
 **ARRANQUE DE FUNCIONES
 */
 require_once(dirname( __FILE__ ) ."/functions/inicio.php");
