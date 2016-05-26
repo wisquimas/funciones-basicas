@@ -1,6 +1,6 @@
 {
-  "name": "gafa/funciones-basicas",
-  "type": "library",
+  "name": "wisquimas/funciones-basicas",
+  "type": "wordpress-plugin",
   "description": "Funciones para iniciar en gafa",
   "license": "MIT",
   "authors": [
@@ -11,6 +11,5 @@
   ],
   "require": {
     "composer/installers": "~1.0",
-    "php": ">=5.3.2"
   }
 }
