@@ -24,9 +24,10 @@ class GafaTemplate
     /**
      * @return GafaTemplate regresa el singleton de GafaTemplate.
      */
-    public static function Instance(){
+    public static function Instance()
+    {
 
-        if(GafaTemplate::$intance === null) {
+        if (GafaTemplate::$intance === null) {
             GafaTemplate::$intance = new GafaTemplate();
         }
 
@@ -36,7 +37,7 @@ class GafaTemplate
     private function __construct()
     {
         // Filtros de inicializacion.
-        $this->templatepath = apply_filters(GafaTemplate::FilterGafaTemplatePath,TEMPLATEPATH);
+        $this->templatepath = apply_filters(GafaTemplate::FilterGafaTemplatePath, TEMPLATEPATH);
     }
 
     /**
@@ -47,16 +48,18 @@ class GafaTemplate
 
     /**
      * Imprime el template
-     * @param string $path       Path del archivo dentro de la carpeta template
-     * @param array  $argumentos Variables que se quieren enviar al template
+     * @param string $path Path del archivo dentro de la carpeta template
+     * @param array $argumentos Variables que se quieren enviar al template
      * @return string el codigo html del template.
      */
-    private function ImprimirInternal( $path = '', $argumentos = array() ){
+    private function ImprimirInternal($path = '', $argumentos = array())
+    {
+        $path = $path . '.tpl.php';
         extract($argumentos, EXTR_PREFIX_SAME, "wddx");
         unset($argumentos);
 
         ob_start();
-        require($this->templatepath.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR.$path);
+        require($this->templatepath . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR . $path);
         return ob_get_clean();
     }
 
@@ -66,7 +69,8 @@ class GafaTemplate
      * @param array $argumentos
      * @return string
      */
-    public static function Imprimir( $path = '', $argumentos = array() ){
+    public static function Imprimir($path = '', $argumentos = array())
+    {
         return GafaTemplate::Instance()->ImprimirInternal($path, $argumentos);
     }
 }

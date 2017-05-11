@@ -5,12 +5,12 @@ require_once(dirname( __FILE__ ) ."/fragmentos/etiquetas_og.php");
 
 if( DEBUG_GAFA ){
 	/*PHP CONSOLE*/
-	require_once('php-console/src/PhpConsole/__autoload.php');
-	$handler = PhpConsole\Handler::getInstance();
-	$handler->start();
+	//require_once('php-console/src/PhpConsole/__autoload.php');
+	//$handler = PhpConsole\Handler::getInstance();
+	//$handler->start();
 };
 function gafa($var, $tags = null) {
-    PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($var, $tags, 1);
+    //PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($var, $tags, 1);
 }
 
 
